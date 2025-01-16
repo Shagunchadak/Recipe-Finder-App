@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Course Recipes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7e7d8; /* Soft peach background */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff6f61; /* Deep green */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #6fa46f; /* Lighter green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #5b8e60;
+        }
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .recipe-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .recipe-card:hover {
+            transform: scale(1.05);
+        }
+        .recipe-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .recipe-details {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .recipe-details img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .recipe-details h2 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .recipe-details p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Main Course Recipes</h1>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search for main course recipes...">
+        <button>Search</button>
+    </div>
+
+    <!-- Main Course Recipe List -->
+    <div class="recipes">
+        <a href="#main-course1">
+            <div class="recipe-card">
+                <h3>Grilled Chicken</h3>
+                <img src="grilled-chicken.jpg" alt="Grilled Chicken" style="width: 30%; height: 200px; object-fit: cover;">
+            </div>
+        </a>
+        <a href="#main-course2">
+            <div class="recipe-card">
+                <h3>Pasta Primavera</h3>
+                <img src="pasta-primavera.jpg" alt="Pasta Primavera" style="width: 30%; height: 200px; object-fit: cover;">
+            </div>
+        </a>
+        <a href="#main-course3">
+            <div class="recipe-card">
+                <h3>Vegetable Stir Fry</h3>
+                <img src="vegetable-stir-fry.jpg" alt="Vegetable Stir Fry" style="width: 30%; height: 200px; object-fit: cover;">
+            </div>
+        </a>
+    </div>
+
+    <!-- Main Course 1 - Grilled Chicken -->
+    <div id="main-course1" class="recipe-details">
+        <img src="grilled-chicken.jpg" alt="Grilled Chicken" style="width: 30%; height: 200px; object-fit: cover;">
+        <h2>Grilled Chicken</h2>
+        <p>A simple yet delicious grilled chicken recipe with a smoky flavor.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>4 boneless chicken breasts</li>
+            <li>2 tbsp olive oil</li>
+            <li>1 tsp paprika</li>
+            <li>1 tsp garlic powder</li>
+            <li>1/2 tsp cumin</li>
+            <li>Salt and pepper to taste</li>
+            <li>1 tbsp lemon juice</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Preheat grill to medium-high heat.</li>
+            <li>In a small bowl, mix olive oil, paprika, garlic powder, cumin, salt, and pepper.</li>
+            <li>Brush the chicken breasts with the seasoning mix and grill for 6-8 minutes per side, or until cooked through.</li>
+            <li>Serve with a squeeze of lemon juice.</li>
+        </ol>
+    </div>
+
+    <!-- Main Course 2 - Pasta Primavera -->
+    <div id="main-course2" class="recipe-details">
+        <img src="pasta-primavera.jpg" alt="Pasta Primavera" style="width: 30%; height: 200px; object-fit: cover;">
+        <h2>Pasta Primavera</h2>
+        <p>A light and refreshing pasta dish loaded with colorful vegetables.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>1 lb pasta (penne or spaghetti)</li>
+            <li>1 red bell pepper, chopped</li>
+            <li>1 zucchini, sliced</li>
+            <li>1 cup cherry tomatoes, halved</li>
+            <li>2 tbsp olive oil</li>
+            <li>2 cloves garlic, minced</li>
+            <li>1/4 cup Parmesan cheese</li>
+            <li>Salt and pepper to taste</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Cook the pasta according to package instructions.</li>
+            <li>In a pan, heat olive oil and sauté garlic, bell pepper, zucchini, and tomatoes for 5-7 minutes.</li>
+            <li>Combine the pasta and vegetables, tossing to coat evenly. Sprinkle with Parmesan, salt, and pepper before serving.</li>
+        </ol>
+    </div>
+
+    <!-- Main Course 3 - Vegetable Stir Fry -->
+    <div id="main-course3" class="recipe-details">
+        <img src="vegetable-stir-fry.jpg" alt="Vegetable Stir Fry" style="width: 30%; height: 200px; object-fit: cover;">
+        <h2>Vegetable Stir Fry</h2>
+        <p>A healthy and vibrant vegetable stir fry with a soy-based sauce.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>1 cup broccoli florets</li>
+            <li>1 red bell pepper, sliced</li>
+            <li>1 cup snap peas</li>
+            <li>1 carrot, julienned</li>
+            <li>2 tbsp soy sauce</li>
+            <li>1 tbsp sesame oil</li>
+            <li>2 cloves garlic, minced</li>
+            <li>1 tbsp ginger, grated</li>
+            <li>1 tbsp rice vinegar</li>
+            <li>1 tbsp sesame seeds</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Heat sesame oil in a pan over medium heat. Add garlic and ginger, and sauté for 1-2 minutes.</li>
+            <li>Add broccoli, bell pepper, snap peas, and carrots. Stir fry for 5-7 minutes.</li>
+            <li>Add soy sauce and rice vinegar, and stir to coat. Sprinkle with sesame seeds before serving.</li>
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soup Recipes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f3d2; /* Light yellowish */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #61ddff;
+        }
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .recipe-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .recipe-card:hover {
+            transform: scale(1.05);
+        }
+        .recipe-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .recipe-details {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .recipe-details img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .recipe-details h2 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .recipe-details p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Soup Recipes</h1>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search for soup recipes...">
+        <button>Search</button>
+    </div>
+
+    <!-- Soup Recipe List -->
+    <div class="recipes">
+        <a href="#soup1">
+            <div class="recipe-card">
+                <h3>Tomato Soup</h3>
+                <img src="tomato-soup.jpg" alt="Tomato Soup" style="width: 30%; height: 100px; object-fit: cover;">
+            </div>
+        </a>
+        <a href="#soup2">
+            <div class="recipe-card">
+                <h3>Chicken Soup</h3>
+                <img src="chicken-soup.jpg" alt="Chicken Soup" style="width: 30%; height: 100px; object-fit: cover;">
+            </div>
+        </a>
+        <a href="#soup3">
+            <div class="recipe-card">
+                <h3>Vegetable Soup</h3>
+                <img src="vegetable-soup.jpg" alt="Vegetable Soup" style="width: 30%; height: 100px; object-fit: cover;">
+            </div>
+        </a>
+    </div>
+
+    <!-- Soup 1 - Tomato Soup -->
+    <div id="soup1" class="recipe-details">
+        <img src="tomato-soup.jpg" alt="Tomato Soup" style="width: 20%; height: 200px; object-fit: cover;">
+        <h2>Tomato Soup</h2>
+        <p>Classic, comforting tomato soup perfect for any season.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>6 ripe tomatoes, chopped</li>
+            <li>1 onion, chopped</li>
+            <li>2 cloves garlic, minced</li>
+            <li>4 cups vegetable broth</li>
+            <li>1/2 cup heavy cream</li>
+            <li>Salt and pepper to taste</li>
+            <li>1 tbsp olive oil</li>
+            <li>1 tsp dried basil</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>In a pot, heat olive oil over medium heat. Add onion and garlic, and sauté until softened.</li>
+            <li>Add chopped tomatoes, vegetable broth, basil, salt, and pepper. Bring to a boil.</li>
+            <li>Reduce heat and simmer for 20-30 minutes until tomatoes are tender.</li>
+            <li>Puree the soup using an immersion blender or regular blender. Stir in heavy cream and serve warm.</li>
+        </ol>
+    </div>
+
+    <!-- Soup 2 - Chicken Soup -->
+    <div id="soup2" class="recipe-details">
+        <img src="chicken-soup.jpg" alt="Chicken Soup" style="width: 20%; height: 200px; object-fit: cover;">
+        <h2>Chicken Soup</h2>
+        <p>A hearty and nourishing soup made with tender chicken and vegetables.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>2 chicken breasts, cooked and shredded</li>
+            <li>1 onion, chopped</li>
+            <li>2 carrots, sliced</li>
+            <li>2 celery stalks, chopped</li>
+            <li>4 cups chicken broth</li>
+            <li>1 bay leaf</li>
+            <li>1 tsp thyme</li>
+            <li>Salt and pepper to taste</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>In a large pot, combine chicken broth, carrots, celery, and onion. Bring to a boil.</li>
+            <li>Reduce heat, add chicken, thyme, bay leaf, salt, and pepper. Simmer for 25-30 minutes.</li>
+            <li>Remove bay leaf and serve the soup hot.</li>
+        </ol>
+    </div>
+
+    <!-- Soup 3 - Vegetable Soup -->
+    <div id="soup3" class="recipe-details">
+        <img src="vegetable-soup.jpg" alt="Vegetable Soup" style="width: 20%; height: 200px; object-fit: cover;">
+        <h2>Vegetable Soup</h2>
+        <p>A flavorful and nutritious vegetable soup that is simple to prepare.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>1 onion, chopped</li>
+            <li>2 carrots, chopped</li>
+            <li>2 celery stalks, chopped</li>
+            <li>1 zucchini, chopped</li>
+            <li>1 cup green beans</li>
+            <li>4 cups vegetable broth</li>
+            <li>1 tsp garlic powder</li>
+            <li>Salt and pepper to taste</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>In a pot, sauté onion, carrots, and celery until soft.</li>
+            <li>Add zucchini, green beans, vegetable broth, garlic powder, salt, and pepper.</li>
+            <li>Bring to a boil, then reduce heat and simmer for 30-40 minutes until vegetables are tender.</li>
+            <li>Serve hot and enjoy!</li>
+        </ol>
+    </div>
+</body>
+</html>

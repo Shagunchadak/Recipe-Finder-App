@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Recipes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fffaf0; /* Light beige */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #61ddff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #50d7e6;
+        }
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .recipe-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .recipe-card:hover {
+            transform: scale(1.05);
+        }
+        .recipe-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .recipe-details {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .recipe-details img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .recipe-details h2 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .recipe-details p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Smoothie Recipes</h1>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search for smoothie recipes...">
+        <button>Search</button>
+    </div>
+
+    <!-- Smoothie Recipe List -->
+    <div class="recipes">
+        <a href="#smoothie1">
+            <div class="recipe-card">
+                <h3>Mango Smoothie</h3>
+                <img src="download.jpg" alt="Mango Smoothie" style="width: 40%; height: auto;">
+            </div>
+        </a>
+        <a href="#smoothie2">
+            <div class="recipe-card">
+                <h3>Berry Smoothie</h3>
+                <img src="berry.jpg" alt="Berry Smoothie" style="width: 32%; height: auto;">
+            </div>
+        </a>
+        <a href="#smoothie3">
+            <div class="recipe-card">
+                <h3>Green Smoothie</h3>
+                <img src="green.jpg" alt="Green Smoothie" style="width: 32%; height: auto;">
+            </div>
+        </a>
+    </div>
+
+    <!-- Smoothie 1 - Mango Smoothie -->
+    <div id="smoothie1" class="recipe-details">
+        <img src="download.jpg" alt="Mango Smoothie" style="width: 35%; height: auto;">
+        <h2>Mango Smoothie</h2>
+        <p>A tropical and refreshing mango smoothie, perfect for a hot day.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>1 ripe mango, peeled and chopped</li>
+            <li>1/2 cup Greek yogurt</li>
+            <li>1/2 cup milk</li>
+            <li>1 tbsp honey</li>
+            <li>Ice cubes</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Combine mango, yogurt, milk, and honey in a blender.</li>
+            <li>Blend until smooth and creamy.</li>
+            <li>Add ice cubes and blend again until chilled.</li>
+            <li>Serve cold and enjoy!</li>
+        </ol>
+    </div>
+
+    <!-- Smoothie 2 - Berry Smoothie -->
+    <div id="smoothie2" class="recipe-details">
+        <img src="berry.jpg" alt="Berry Smoothie" style="width: 45%; height: auto;">
+        <h2>Berry Smoothie</h2>
+        <p>A sweet and healthy smoothie packed with berries and antioxidants.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>1/2 cup strawberries</li>
+            <li>1/2 cup blueberries</li>
+            <li>1/2 cup raspberries</li>
+            <li>1 cup almond milk</li>
+            <li>1 tbsp honey</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Combine all berries, almond milk, and honey in a blender.</li>
+            <li>Blend until smooth.</li>
+            <li>Serve chilled and garnish with extra berries if desired.</li>
+        </ol>
+    </div>
+
+    <!-- Smoothie 3 - Green Smoothie -->
+    <div id="smoothie3" class="recipe-details">
+        <img src="green.jpg" alt="Green Smoothie" style="width: 45%; height: auto;">
+        <h2>Green Smoothie</h2>
+        <p>A healthy green smoothie to boost your energy and detox your body.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>1 cup spinach leaves</li>
+            <li>1/2 banana</li>
+            <li>1/2 cup pineapple chunks</li>
+            <li>1/2 cup coconut water</li>
+            <li>1 tbsp chia seeds</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Place spinach, banana, pineapple, coconut water, and chia seeds in a blender.</li>
+            <li>Blend until smooth.</li>
+            <li>Serve immediately and enjoy the refreshing taste!</li>
+        </ol>
+    </div>
+</body>
+</html>

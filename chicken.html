@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Recipes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fffaf0; /* Light beige */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #61ddff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .search-bar button:hover {
+            background-color: #50d7e6;
+        }
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .recipe-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .recipe-card:hover {
+            transform: scale(1.05);
+        }
+        .recipe-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .recipe-details {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .recipe-details img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .recipe-details h2 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .recipe-details p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chicken Recipes</h1>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search for recipes...">
+        <button>Search</button>
+    </div>
+
+    <div class="recipes">
+        <a href="#recipe1">
+            <div class="recipe-card">
+                <h3>Chicken Curry</h3>
+                <img src="c:\Users\HP\Downloads\grilledcur.jpg" alt="Chicken Curry" style="width: 50%; height: 200px; object-fit: cover;">
+            </div>
+        </a>
+        <a href="#recipe2">
+            <div class="recipe-card">
+                <h3>Grilled Chicken</h3>
+                <img src="c:\Users\HP\Downloads\grilled.jpg" alt="Grilled Chicken" style="width: 50%; height: 200px; object-fit: cover;">
+            </div>
+        </a>
+        <a href="#recipe3">
+            <div class="recipe-card">
+                <h3>Chicken Soup</h3>
+                <img src="c:\Users\HP\Downloads\soupchicken.jpg" alt="Chicken Soup" style="width: 50%; height: 200px; object-fit: cover;">
+            </div>
+        </a>
+    </div>
+
+    <!-- Recipe 1 - Chicken Curry -->
+    <div id="recipe1" class="recipe-details">
+        <img src="c:\Users\HP\Downloads\grilled.jpg" alt="Chicken Curry" style="width: 35%; height: auto;">
+        <h2>Chicken Curry</h2>
+        <p>Enjoy a flavorful and spicy chicken curry perfect for a family meal.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>1 lb chicken, cut into pieces</li>
+            <li>2 onions, chopped</li>
+            <li>2 tomatoes, chopped</li>
+            <li>1 tbsp ginger-garlic paste</li>
+            <li>1 tsp turmeric powder</li>
+            <li>1 tsp cumin powder</li>
+            <li>1 tsp chili powder</li>
+            <li>1 cup coconut milk</li>
+            <li>Salt and pepper to taste</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>In a pan, heat oil and sauté onions until golden brown.</li>
+            <li>Add ginger-garlic paste and cook for 1 minute.</li>
+            <li>Add chicken pieces and cook for 5-7 minutes.</li>
+            <li>Add tomatoes and cook until soft.</li>
+            <li>Add all spices and cook for 2 minutes.</li>
+            <li>Pour in coconut milk, simmer, and cook until the chicken is tender.</li>
+            <li>Season with salt and pepper to taste.</li>
+            <li>Serve hot with rice or naan.</li>
+        </ol>
+    </div>
+
+    <!-- Recipe 2 - Grilled Chicken -->
+    <div id="recipe2" class="recipe-details">
+        <img src="c:\Users\HP\Downloads\grilledcur.jpg" alt="Chicken Curry" style="width: 35%; height: auto;">
+        <h2>Grilled Chicken</h2>
+        <p>A healthy and delicious grilled chicken recipe perfect for any occasion.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>4 chicken breasts</li>
+            <li>1 tbsp olive oil</li>
+            <li>1 tsp paprika</li>
+            <li>1 tsp garlic powder</li>
+            <li>1 tsp onion powder</li>
+            <li>1 tsp thyme</li>
+            <li>Salt and pepper to taste</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Preheat the grill to medium heat.</li>
+            <li>Rub chicken breasts with olive oil and season with paprika, garlic powder, onion powder, thyme, salt, and pepper.</li>
+            <li>Place chicken on the grill and cook for 5-7 minutes per side until fully cooked.</li>
+            <li>Serve with grilled vegetables or a salad.</li>
+        </ol>
+    </div>
+
+    <!-- Recipe 3 - Chicken Soup -->
+    <div id="recipe3" class="recipe-details">
+        <img src="c:\Users\HP\Downloads\soupchicken.jpg" alt="Chicken Soup" style="width: 35%; height: auto;">
+        <h2>Chicken Soup</h2>
+        <p>A warm and comforting chicken soup, perfect for cold weather.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>1 lb chicken, cut into pieces</li>
+            <li>2 carrots, sliced</li>
+            <li>2 celery stalks, chopped</li>
+            <li>1 onion, chopped</li>
+            <li>4 cups chicken broth</li>
+            <li>1 tsp thyme</li>
+            <li>Salt and pepper to taste</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>In a pot, cook chicken in broth until tender.</li>
+            <li>Add carrots, celery, and onion, and cook for 10 minutes.</li>
+            <li>Add thyme and season with salt and pepper.</li>
+            <li>Simmer for another 10 minutes until vegetables are tender.</li>
+            <li>Serve hot with bread.</li>
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salad Recipes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fffaf0; /* Light beige */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #61ddff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #50d7e6;
+        }
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .recipe-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .recipe-card:hover {
+            transform: scale(1.05);
+        }
+        .recipe-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .recipe-details {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .recipe-details img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .recipe-details h2 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .recipe-details p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Salad Recipes</h1>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search for salad recipes...">
+        <button>Search</button>
+    </div>
+
+    <!-- Salad Recipe List -->
+    <div class="recipes">
+        <a href="#salad1">
+            <div class="recipe-card">
+                <h3>Caesar Salad</h3>
+                <img src="caesar.jpg" alt="Caesar Salad" style="width: 32%; height: auto;">
+            </div>
+        </a>
+        <a href="#salad2">
+            <div class="recipe-card">
+                <h3>Greek Salad</h3>
+                <img src="greek.jpg" alt="Greek Salad" style="width: 32%; height: auto;">
+            </div>
+        </a>
+        <a href="#salad3">
+            <div class="recipe-card">
+                <h3>Fruit Salad</h3>
+                <img src="fruit.jpg" alt="Fruit Salad" style="width: 32%; height: auto;">
+            </div>
+        </a>
+    </div>
+
+    <!-- Salad 1 - Caesar Salad -->
+    <div id="salad1" class="recipe-details">
+        <img src="caesar.jpg" alt="Caesar Salad" style="width: 20%; height: auto;">
+        <h2>Caesar Salad</h2>
+        <p>A classic Caesar salad with fresh greens, croutons, and creamy dressing.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>4 cups romaine lettuce, chopped</li>
+            <li>1/2 cup Caesar dressing</li>
+            <li>1/4 cup grated parmesan cheese</li>
+            <li>1/2 cup croutons</li>
+            <li>Fresh ground black pepper</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>In a large bowl, combine lettuce, dressing, and parmesan cheese.</li>
+            <li>Top with croutons and a sprinkle of black pepper.</li>
+            <li>Toss to combine and serve immediately.</li>
+        </ol>
+    </div>
+
+    <!-- Salad 2 - Greek Salad -->
+    <div id="salad2" class="recipe-details">
+        <img src="greek.jpg" alt="Greek Salad" style="width: 20%; height: auto;">
+        <h2>Greek Salad</h2>
+        <p>A refreshing salad with cucumbers, tomatoes, olives, and feta cheese.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>2 cups cucumber, sliced</li>
+            <li>1 cup cherry tomatoes, halved</li>
+            <li>1/2 cup Kalamata olives</li>
+            <li>1/4 cup red onion, sliced</li>
+            <li>1/2 cup feta cheese, crumbled</li>
+            <li>2 tbsp olive oil</li>
+            <li>1 tbsp red wine vinegar</li>
+            <li>Salt and pepper to taste</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Combine all ingredients in a large bowl.</li>
+            <li>Drizzle with olive oil and red wine vinegar.</li>
+            <li>Toss gently and season with salt and pepper.</li>
+            <li>Serve chilled and enjoy!</li>
+        </ol>
+    </div>
+
+    <!-- Salad 3 - Fruit Salad -->
+    <div id="salad3" class="recipe-details">
+        <img src="fruit.jpg" alt="Fruit Salad" style="width: 20%; height: auto;">
+        <h2>Fruit Salad</h2>
+        <p>A sweet and colorful mix of fresh seasonal fruits.</p>
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>1 cup strawberries, sliced</li>
+            <li>1 cup pineapple chunks</li>
+            <li>1 cup watermelon, cubed</li>
+            <li>1/2 cup blueberries</li>
+            <li>1/2 cup orange juice</li>
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Combine all fruits in a large bowl.</li>
+            <li>Pour orange juice over the fruit and toss gently.</li>
+            <li>Refrigerate for 30 minutes before serving.</li>
+            <li>Enjoy the refreshing fruit salad!</li>
+        </ol>
+    </div>
+</body>
+</html>

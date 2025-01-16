@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffaf0; /* Light beige color */
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #61ddff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .search-bar button:hover {
+            background-color: #50d7e6;
+        }
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .recipe-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .recipe-card:hover {
+            transform: scale(1.05);
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .recipe-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recipe Finder</h1>
+        <p>Find your favorite recipes in one click!</p>
+    </header>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for recipes...">
+        <button onclick="searchRecipes()">Search</button>
+    </div>
+
+    <div class="recipes">
+        <a href="deserts.html" class="recipe-item" data-name="desserts">
+            <div class="recipe-card">
+                <img src="c:\Users\HP\Downloads\desserts.jpg" alt="Desserts">
+                <h3>Desserts</h3>
+            </div>
+        </a>
+        <a href="salads.html" class="recipe-item" data-name="salads">
+            <div class="recipe-card">
+                <img src="c:\Users\HP\Downloads\salad.jpg" alt="Salads">
+                <h3>Salads</h3>
+            </div>
+        </a>
+        <a href="maincourse.html" class="recipe-item" data-name="main course">
+            <div class="recipe-card">
+                <img src="c:\Users\HP\Downloads\maincou.jpg" alt="Main Course">
+                <h3>Main Course</h3>
+            </div>
+        </a>
+        <a href="soup.html" class="recipe-item" data-name="soup">
+            <div class="recipe-card">
+                <img src="c:\Users\HP\Downloads\soup.jpg" alt="Soup">
+                <h3>Soup</h3>
+            </div>
+        </a>
+        <a href="chicken.html" class="recipe-item" data-name="chicken">
+            <div class="recipe-card">
+                <img src="c:\Users\HP\Downloads\chi.jpg" alt="Chicken">
+                <h3>Chicken</h3>
+            </div>
+        </a>
+        <a href="smoothies.html" class="recipe-item" data-name="smoothies">
+            <div class="recipe-card">
+                <img src="c:\Users\HP\Downloads\smoothie.jpg" alt="Smoothies">
+                <h3>Smoothies</h3>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        function searchRecipes() {
+            var input = document.getElementById('search-input').value.toLowerCase();
+            var recipeItems = document.querySelectorAll('.recipe-item');
+
+            recipeItems.forEach(function(item) {
+                var recipeName = item.getAttribute('data-name').toLowerCase();
+                if (recipeName.includes(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
